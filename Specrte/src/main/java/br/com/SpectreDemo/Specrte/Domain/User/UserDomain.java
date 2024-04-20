@@ -4,9 +4,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
 
 @Entity
+@Getter
+@Setter
 public class UserDomain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,37 +22,6 @@ public class UserDomain {
 
 
 
-    public String getUserName() {
-        return UserName;
-    }
-    public void setUserName(String userName) {
-        UserName = userName;
-    }
-    public String getUserPassaword() {
-        return UserPassaword;
-    }
-    public void setUserPassaword(String userPassaword) {
-        UserPassaword = userPassaword;
-    }
-    public String getUserEmail() {
-        return UserEmail;
-    }
-    public void setUserEmail(String userEmail) {
-        UserEmail = userEmail;
-    }
-    public Enum<UserStatus> getUserStatus() {
-        return UserStatus;
-    }
-    
-    public void setUserStatus(Enum<UserStatus> userStatus) {
-        UserStatus = userStatus;
-    }
-    public Long getUserId() {
-        return UserId;
-    }
-    public void setUserId(Long userId) {
-        UserId = userId;
-    }
-    
+
 
 }

@@ -38,9 +38,6 @@ public class UserController {
     public void DeleteUser(@PathVariable Integer userId){
         userService.DeleteUser(userId);
     }
-
-
-
     @PutMapping("/{UserById}")
     public UserDomain PutUser(@RequestBody UserDomain user, @PathVariable Long userId) throws Exception {
         return userService.UpdateUser(userId,null);

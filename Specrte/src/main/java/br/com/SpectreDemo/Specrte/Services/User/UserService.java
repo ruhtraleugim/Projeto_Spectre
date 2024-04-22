@@ -21,20 +21,17 @@ public class UserService {
     public List<UserDomain>  GetAllUsers(){
         return userRepositories.findAll();
     }
-    
     public  void DeleteUser(long userId){
         userRepositories.deleteById(userId);
-
     }
     public Optional<UserDomain> FindUserById(long userId){
         return userRepositories.findById(userId);
     }
     //Essa exeção sera tratada dentro de Handle/Exeptions
-    public UserDomain UpdateUser(Long userId,UserDomain newUser) throws Exception{
-        if (!userRepositories.existsById(userId)) {
-            newUser.setUserId(userId);
-            return userRepositories.save(newUser);            
-        } else throw new Exception("user não foi encontrado em nosso banco de dados");
+    public UserDomain UpdateUser(Long userId,UserDomain user) throws Exception{
+        if (userRepositories.existsById(userId)) {
+            user.setUserId(userId);
+            return userRepositories.save(user);            
+        } else {throw new Exception("user não foi encontrado em nosso banco de dados");}
     }
-
 }

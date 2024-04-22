@@ -16,12 +16,6 @@ public class UserDomain {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long UserId;
     private String UserName;
-    private String UserPassaword;
+    private String UserPassword;
     private String UserEmail;
-    private Enum<UserStatus> UserStatus;
-
-
-
-
-
 }

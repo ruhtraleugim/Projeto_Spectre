@@ -26,23 +26,20 @@ public class UserController {
     public List<UserDomain> GetAllUsers(){
         return userService.GetAllUsers();
     }
-    @GetMapping("/{UserById}")
-    public Optional<UserDomain> GetUserId(@PathVariable long UserId){
-        return userService.FindUserById(UserId);
+    @GetMapping("/{userId}")
+    public Optional<UserDomain> GetUserId(@PathVariable long userId){
+        return userService.FindUserById(userId);
     }
     @PostMapping
     public UserDomain PostUser(@RequestBody UserDomain user){
         return userService.CreateUser(user);
     }
-    @DeleteMapping("/{UserById}")
-    public void DeleteUser(@PathVariable Integer userId){
+    @DeleteMapping("/{userId}")
+    public void DeleteUser(@PathVariable Long userId){
         userService.DeleteUser(userId);
     }
-    @PutMapping("/{UserById}")
+    @PutMapping("/{userId}")
     public UserDomain PutUser(@RequestBody UserDomain user, @PathVariable Long userId) throws Exception {
-        return userService.UpdateUser(userId,null);
+        return userService.UpdateUser(userId,user);
     }
-
-
-
 }

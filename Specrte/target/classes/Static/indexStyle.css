@@ -23,7 +23,7 @@ a:hover {
 
 /* Estilos do cabeçalho */
 header {
-    background-color: rgb(58, 36, 171);
+    background-color: rgb(9, 0, 54);
     color: white;
     padding: 8px 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -58,7 +58,7 @@ nav ul li {
 
 /* Conteúdo */
 main {
-    background-color: rgb(58, 36, 171);
+    background-color: rgb(9, 0, 54);
     padding: 10% 5%;
 }
 
@@ -161,7 +161,7 @@ main {
 
 /* Estilos do rodapé */
 footer {
-    background-color: #3a24ab;
+    background-color: rgb(9, 0, 54);
     color: white;
     padding: 20px 0;
     text-align: center;

@@ -11,5 +11,4 @@ public class SpectreApplication {
 		SpringApplication.run(SpectreApplication.class, args);
 
 	}
-
 }

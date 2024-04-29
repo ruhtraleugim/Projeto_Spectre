@@ -1,0 +1,168 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: rgb(58, 36, 171);
+    color: white;
+    padding: 8px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.Cabeçalho {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Conteúdo */
+main {
+    background-color: rgb(58, 36, 171);
+    padding: 10% 5%;
+}
+
+/* Carrossel */
+.Carrocel {
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: rgba(227, 179, 123, 1);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.letreiro {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    line-height: 280px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.quadrado-normal {
+    width: calc(33.33% - 20px);
+    min-height: 320px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgb(58, 36, 171);
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quadrado-normal h2 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.quadrado-normal p {
+    font-size: 0.9em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.quadrado-normal img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.quadrado-normal:hover {
+    transform: scale(1.05);
+}
+
+.ler-mais {
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+/* Efeito de hover para o link "Ler mais" */
+.ler-mais:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query para dispositivos menores */
+@media screen and (max-width: 768px) {
+    .quadrado-normal {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #3a24ab;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}

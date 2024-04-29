@@ -7,11 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.SpectreDemo.Specrte.Domain.User.UserDomain;
+import br.com.SpectreDemo.Specrte.Handlers.Exeptions.UserNotFindException;
 import br.com.SpectreDemo.Specrte.Repositories.User.UserRepositories;
 
 
 @Service
 public class UserService {
+
     @Autowired
     private UserRepositories userRepositories;
 
@@ -28,10 +30,12 @@ public class UserService {
         return userRepositories.findById(userId);
     }
     //Essa exeção sera tratada dentro de Handle/Exeptions
-    public UserDomain UpdateUser(Long userId,UserDomain user) throws Exception{
+    public UserDomain UpdateUser(Long userId,UserDomain user) throws UserNotFindException{
         if (userRepositories.existsById(userId)) {
             user.setUserId(userId);
             return userRepositories.save(user);            
-        } else {throw new Exception("user não foi encontrado em nosso banco de dados");}
+        } else {throw new UserNotFindException("user não foi encontrado em nosso banco de dados");}
     }
+
+
 }

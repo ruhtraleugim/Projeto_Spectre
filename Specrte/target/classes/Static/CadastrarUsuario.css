@@ -3,6 +3,42 @@
     padding: 0;
     box-sizing: border-box;
 }
+header {
+    background-color: rgb(191, 191, 188);
+    color: white;
+    padding: 8px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.Cabeçalho h1 a {
+    color:azure;
+    text-decoration: none;
+}
+.Cabeçalho {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
 
 body {
     font-family: Arial, sans-serif;
